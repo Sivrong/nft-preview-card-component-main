@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primary1: hsl(215, 51%, 70%);
+  --primary2: hsl(178, 100%, 50%);
+  --second: hsl(217, 54%, 11%);
+  --third: hsl(216, 50%, 16%);
+  --fourth: hsl(216, 14%, 52%);
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: var(--second);
+  font-size: 18px;
+}
+.container {
+  margin: 0 auto;
+  max-width: 360px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.card {
+  background-color: var(--third);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 20px;
+}
+.header {
+  cursor: pointer;
+  position: relative;
+}
+.overlay {
+  background-color: hsl(178, 100%, 50%);
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+  border-radius: 1rem;
+  display: none;
+  width: 100%;
+}
+
+.text {
+  text-align: start;
+}
+.text h2 {
+  color: white;
+  padding: 10px 0;
+}
+h2:hover {
+  color: var(--primary2);
+  cursor: pointer;
+}
+.text p {
+  color: var(--fourth);
+  padding: 10px 0;
+}
+.pridate {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+}
+
+.first {
+  display: inline-flex;
+}
+.first img {
+  width: 12px;
+  height: 24px;
+  padding-right: 5px;
+  padding-top: 5px;
+}
+.second {
+  display: inline-flex;
+}
+
+.second img {
+  width: auto;
+  height: 26px;
+  padding-right: 5px;
+}
+.price {
+  color: var(--primary2);
+  padding: 5px;
+}
+
+.date {
+  color: var(--fourth);
+  padding-top: 2px;
+}
+.line {
+  border: 1px solid var(--fourth);
+}
+.creator {
+  padding: 10px;
+  display: flex;
+}
+
+.creator img {
+  width: auto;
+  height: 38px;
+  border: 2px solid var(--fourth);
+}
+.create {
+  padding-left: 10px;
+  color: hsl(215, 15%, 50%);
+  padding-right: 5px;
+  position: relative;
+  top: 6px;
+}
+.name {
+  position: relative;
+  color: white;
+  top: 6px;
+}
+.name:hover {
+  color: var(--primary2);
+  cursor: pointer;
+}
+
+.view{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  max-width: 50px;
+  height: 50px;
+}
+
+.header:hover .overlay,
+.header:hover .view {
+  display: block;
+}
